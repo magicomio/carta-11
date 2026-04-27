@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>La tua carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .card {
+      width: 220px;
+      height: 320px;
+      background: white;
+      color: black;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      margin: auto;
+      transform: scale(0);
+      animation: reveal 1s ease forwards;
+    }
+
+    .top, .bottom {
+      font-size: 28px;
+    }
+
+    .center {
+      font-size: 80px;
+      text-align: center;
+    }
+
+    .bottom {
+      transform: rotate(180deg);
+    }
+
+    @keyframes reveal {
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .text {
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="text">La tua carta è...</div>
+
+  <div class="card">
+    <div class="top">A ♥</div>
+    <div class="center">♥</div>
+    <div class="bottom">A ♥</div>
+  </div>
+</div>
+
+</body>
+</html>
